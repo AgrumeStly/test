@@ -2,15 +2,28 @@
 
 <head>
 <script language="JavaScript">
-	var password="";password=prompt('请输入密码 (本网站需输入密码才可进入):','');
-	if (password != 'test')   {alert("密码不正确,无法进入本站!!");
-	window.opener=null; window.close();}
+    function save() {
+        localStorage.password = $('[name=limitcnt-up]')[0].value
+    }
+    function check() {
+        if (localStorage.password == $('[name=check-password]')[0].value) {
+            alert("yes");
+        }
+        else alert("no");
+    }
 </script>
 
 </head>
 
 <body>
-<p style="color:red; font-size:20;">恭喜您进入到本网页，您已经被授权查看网页内容！</p>
+        <form id="checkpassword">
+          <input type="text" class="passwordcheck" name="check-password" autocomplete="off" />
+        </form>
+        <button class="checkpasswordbtn" onclick="check()" style="margin-top:16px;">确定</button>
+        <form id="savepassword">
+          <input type="text" class="passwordsave" name="save-password" autocomplete="off" />
+        </form>
+        <button class="savepassword" onclick="save()" style="margin-top:16px;">确定</button>
 </boody>
 
 </html>
