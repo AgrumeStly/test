@@ -2,28 +2,33 @@
 
 <head>
 <script language="JavaScript">
+    if (localStorage.flag == 1) console.log("hi");
     function save() {
-        localStorage.password = $('[name=limitcnt-up]')[0].value
+        localStorage.password = $('[name=limitcnt-up]')[0].value;
+        localStorage.flag = 0
+        location.href = "/";
     }
     function check() {
         if (localStorage.password == $('[name=check-password]')[0].value) {
-            alert("yes");
+            localStorage.flag = 1;
+            location.href = "/";
         }
-        else alert("no");
     }
 </script>
 
 </head>
 
 <body>
-        <form id="checkpassword">
-          <input type="text" class="passwordcheck" name="check-password" autocomplete="off" />
-        </form>
-        <button class="checkpasswordbtn" onclick="check()" style="margin-top:16px;">确定</button>
+        <h3>设置密码</h3>
         <form id="savepassword">
           <input type="text" class="passwordsave" name="save-password" autocomplete="off" />
         </form>
         <button class="savepassword" onclick="save()" style="margin-top:16px;">确定</button>
+        <h3>输入密码</h3>
+        <form id="checkpassword">
+          <input type="text" class="passwordcheck" name="check-password" autocomplete="off" />
+        </form>
+        <button class="checkpasswordbtn" onclick="check()" style="margin-top:16px;">确定</button>
 </boody>
 
 </html>
