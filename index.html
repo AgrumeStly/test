@@ -1,34 +1,822 @@
-<html>
 
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html>
 <head>
-<script language="JavaScript">
-    if (localStorage.flag == 1) console.log("hi");
-    function save() {
-        localStorage.password = $('[name=limitcnt-up]')[0].value;
-        localStorage.flag = 0
-        location.href = "/";
-    }
-    function check() {
-        if (localStorage.password == $('[name=check-password]')[0].value) {
-            localStorage.flag = 1;
-            location.href = "/";
+<title>北京一零一中学</title>
+<meta name=”Keywords” Content=”北京一零一中学一零一实验学校″>
+<meta name=”Description” Content=”北京一零一中学一零一实验学校”>
+<link rel="shortcut icon" href="/resources/sunflower/css/images/favicon.ico" type="image/x-icon" />
+<link href="http://www.beijing101.com/resources/sunflower/assets/reset_base_m.css?v=1" rel="stylesheet" type="text/css" />
+<link href="http://www.beijing101.com/resources/sunflower/assets/index.css?v=11" rel="stylesheet" type="text/css" />
+<link href="http://www.beijing101.com/resources/sunflower/assets/head.css?v=6" rel="stylesheet" type="text/css" />
+<link href="http://www.beijing101.com/resources/sunflower/assets/footer.css?v=3" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://www.beijing101.com/resources/sunflower/js/third_party/jquery.js?v=1"></script>
+<script type="text/javascript" src="http://www.beijing101.com/resources/sunflower/js/third_party/jquery.SuperSlide.2.1.1.js?v=1"></script>
+<script type="text/javascript" src="http://www.beijing101.com/resources/sunflower/js/third_party/lhgdialog/lhgdialog.min.js?v=1"></script>
+<script type="text/javascript" src="http://www.beijing101.com/resources/sunflower/js/project/base/init.js?v=1"></script>
+<script type="text/javascript" src="http://www.beijing101.com/resources/sunflower/js/base_ext/core/edu.js?v=1"></script>
+<script type="text/javascript" src="http://www.beijing101.com/resources/sunflower/js/base_ext/core/edu.fn.js?v=1"></script>
+<script type="text/javascript" src="http://www.beijing101.com/resources/sunflower/js/base_ext/core/cover.js?v=1"></script>
+    <link href="/style/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+<!--banner-->
+<div class="banner pr">
+	
+	
+	
+    <img src="http://www.beijing101.com/resources/sunflower/css/images/sy-banner.jpg" alt="" class="banner-img"/>
+	
+	
+    <div class="w1440 ma logo-con">
+        <div class="logo fl">
+       	
+       		
+            <img src="http://www.beijing101.com/resources/sunflower/css/images/ylysyzx_logo-big.png" alt=""  onclick="location.href='/'"/>
+       		
+       		
+       	
+        </div>
+        <div class="ewm-con fr">
+        	
+        </div>
+    </div>
+</div>
+
+<!--menu-->
+<div class="menu">
+    <div class="w1440 ma pr">
+        <ul class="fl heaBig-list">
+            <li><a href="http://www.beijing101.com/school/index.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36" class="First">本站首页</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="meauBig-box">
+                <a href="javascript:;">学校概况 </a>
+                <ul class="meauBox">
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=ee81bc28-2147-441a-ad64-af7cf28503a1">校长致辞 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=742bd765-4381-42c9-b136-552ecfd84ac4">领导集体 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=b49b0447-eee5-4e6e-a614-cb8f00e92c88">教师队伍 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=eb45d58d-18b8-48ae-b79a-2e56a005b21a">部门设置 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=c2826a98-f9b1-4f21-80c1-3707dc34b30b">校史长廊 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=7b90dac8-ed7a-4882-b75b-0cd040d2e15d">校园风貌 </a></li>
+	            
+	            
+                
+                
+                
+                </ul>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="meauBig-box">
+                <a href="javascript:;">党群工作 </a>
+                <ul class="meauBox">
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=818282aa-9581-422b-bb96-fcdac2e0c1b3">政策法规 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=81dc6e0e-ca00-4a15-b969-2078c0f7911a">党建园地 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=da59585e-6f99-4d9e-b62f-f8bbdbc54352">党员风采 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=0cedcbea-fb21-490a-93c5-38bac1becf3e">工会 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=886872cb-cdb7-425c-b682-17a775c9017c">离退休 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=406b90ab-5154-4d95-b0c4-1b39989d8935">统一战线 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=7feeeb38-20c7-4ef3-b02c-323c1ba5823f">创先争优 </a></li>
+	            
+	            
+                
+                
+                
+                </ul>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="meauBig-box">
+                <a href="javascript:;">校务公开 </a>
+                <ul class="meauBox">
+                
+                </ul>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="meauBig-box">
+                <a href="javascript:;">校园动态 </a>
+                <ul class="meauBox">
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=4385c493-4603-4f1c-b263-cd15373af089">校内新闻 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=a2b7ac77-2b54-4e64-9d0c-fe50d248e48e">通知公告 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=4e604f53-7521-4a52-a743-7831e4e93658">教师动态 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=bba0f441-0042-4afe-8205-e7fd994d4bc9">学生动态 </a></li>
+	            
+	            
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=6230ce71-52a6-4a7b-adb9-ade962a90298">媒体报道 </a></li>
+	            
+	            
+                
+                
+                
+                </ul>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="meauBig-box">
+                <a href="javascript:;">招生招聘 </a>
+                <ul class="meauBox">
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=5244c7c6-7cb8-4a20-8b7e-4c8b22d5ae43">招生信息 </a></li>
+	            
+	            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+	            
+	            
+	            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=9b5f878f-813a-460e-bfff-f550ee040039">招聘信息 </a></li>
+	            
+	            
+                
+                
+                
+                </ul>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="http://www.beijing101.com/school/listArticle.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&navigationId=5a5a7d48-2461-4835-b7e4-90c16f4909ff">校友之家 </a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="meauBig-box">
+                <a href="javascript:;">快速通道 </a>
+                <ul class="meauBox">
+                
+                
+                
+                
+	            
+	            <li><a href="http://jinfan.beijing101.com" target="_blank" >金帆交响乐团 </a></li>
+	            
+	            
+	            
+                
+                
+                
+                
+	            
+	            <li><a href="http://www.101.net.cn/"  >成绩查询 </a></li>
+	            
+	            
+	            
+                
+                
+                
+                
+	            
+	            <li><a href="https://beijing101.neikongyi.com/nky"  >预算执行 </a></li>
+	            
+	            
+	            
+                
+                
+                
+                
+	            
+	            <li><a href="http://www.cnki.net/"  >中国知网 </a></li>
+	            
+	            
+	            
+                
+                
+                
+                
+	            
+	            <li><a href="http://10.8.2.252/"  >视频在线 </a></li>
+	            
+	            
+	            
+                
+                
+                
+                
+                
+                
+	            
+	            <li><a href="http://gzzp.bjedu.cn:8002"  >综评系统（师） </a></li>
+	            
+	            
+	            
+                
+                
+                
+                
+	            
+	            <li><a href="http://gzzp.bjedu.cn:8003/"  >综评系统（生） </a></li>
+	            
+	            
+	            
+                
+                
+                
+                
+	            
+	            <li><a href="http://www.beijing101.com/school/viewSchoolNews.do?schoolId=587bb213-aab9-415d-b129-b629de3718e8&articleId=ab3e4cb0-fa3d-4342-89ef-24e63f1b88e2" target="_blank" >学校标识下载 </a></li>
+	            
+	            
+	            
+                
+                
+                
+                
+	            
+	            <li><a href="http://10.1.1.27/Default.aspx?stationID=1" target="_blank" >数字媒体中心 </a></li>
+	            
+	            
+	            
+                
+                
+                
+                </ul>
+            </li>
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="http://mail.beijing101.com/" target="_blank" >
+            
+            
+            邮件系统
+            
+            </a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="http://beijing101.jyyun.com/" target="_blank" >
+            
+            
+            数字校园
+            
+            </a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </ul>
+        <input type="text" placeholder="站内搜索" class="search-input" data-enter="enterSearch" id="enterSearch">
+        <a class="search-ico" onclick="enterSearch();"></a>
+    </div>
+</div>
+<script type="text/javascript">
+var _basePath = 'http://www.beijing101.com/';
+</script>
+<script>
+
+function enterSearch(){
+	var search = $('#enterSearch').val();
+	var schoolId = '5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36';
+	if(search){
+		ajaxSubmit({
+			url : "http://www.beijing101.com/school/search.do",
+			params : {search : search, schoolId : schoolId},
+			updateId : "container",
+			onSuccess : function(){
+			},
+			onError : function(resp){
+			}
+		});
+	}
+}
+
+function showSchoolNews(articleId, schoolId){
+	window.open("http://www.beijing101.com/school/viewSchoolNews.do?schoolId="+schoolId+"&articleId="+articleId, "_blank");
+}
+</script>
+<div id="container">
+<!--con-box-->
+<div class="con-box w1440 ma clearfix">
+    <div class="con-box-l fl">
+        <div class="con-box-l-t fl">
+
+            <div class="grade_banner slideBox1" id="slideBox1">
+                <div class="hd">
+                    <ul>
+                    
+                    
+                        <li></li>
+                    
+                        <li></li>
+                    
+                    
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                    
+                    
+	                    <li onclick="showSchoolNews('fd7e2d23-90af-4d90-b458-d781b6220320', '5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36');">
+	                        <div class="con-text">
+	                            <p>
+	                                <b>12</b><br><span>2019-06 </span>
+	                            </p>
+	                            <h3 class="con-text-z">      腾龙快马逢盛世，送犬迎春贺新年。在2019年元旦来临之际，我们一零一实验学校全体师生欢聚一堂，畅叙感慨。难忘的2018年，我们师生共同携手走过。那平常而又不平凡的365天，其实只是每人生活中的一个驿站，你、我、他洒下了奋斗拼搏的晶莹汗水，留下了辛勤耕耘的扎实足迹。
+
+       2019年，我们追梦，赤橙黄绿青蓝紫。同学们，在这辞旧迎新之时，作为教师，我们此时此刻真实地感受到你们长大了，长高了，也不仅是完成了基础学业，获得了知识，更重要的成长，是你们为人做事的品格、面对困难和坚韧、挑战未来的信心和能力，全面得到培养和提升，这是你们步入成年、走向社会、拥抱未来的必备素养和能力。曾有学者说过：一家的幸福是一国安定的基础。希望新的一年，所有的父母仍能像以前一样，敞开心扉，滋养情怀；中国古代就有“鸦有反哺之义，羊知跪乳之恩”、“滴水之恩，当涌泉相报”、“谁言寸草心，报得三春晖”等典故名言，这就是我爱我家，我爱我校，我更爱我国的根本；所以在开启新的一年里，我们教师想对每一位家长说，感谢你们为孩子们的健康成长艰辛劳动的付出！
+
+       2019年，我们追梦，赤橙黄绿青蓝紫 。同学们，十六岁、十七岁，十八岁、是人生花季，也是指点江山，激扬文字的年华。古人说“修身齐家治国平天下”，其实就是指一个人成年以后的责任。作为教师，我们见证了你们在人生重要阶段的成长过程，不曾忘记一月南京前世不忘后世之师的警钟长鸣，不曾忘记三月踏青种树远足锻炼的辛勤汗水、不曾忘记五月青春律动文学吟咏的嘹亮歌声、不曾忘记九月校园运动会的呐喊加油，不曾忘记金秋十月殷墟文化中华文明的沐浴洗礼，也不曾忘记冬月强身健体的篮球联赛和长跑活动-----更不能忘记安卫校长的智慧领导、不能忘记林永义、张玉玲主任的积极主持，不能忘记杜效仑、王淑兰、张德江、陈涛、王利民等班主任老师和林林、陈斯、张红艳、刘英鹏等老师们的谆谆教诲，所以在开启新的一年里，对助梦实现的无私奉献的园丁们，我们道一声衷心的感谢！
+
+       2019年，我们追梦，赤橙黄绿青蓝紫 。亲爱的同学们，历史的契机，正等待坚定者、奋进者、搏击者。行进在中华民族伟大复兴之路的“关键一程”，正在习近平新时代中国特色社会主义思想指引下，迈向未来，春暖花开！正因此你们的发展将是潜能无限，也一定会遇到各种的困难甚至挫折。阳光自信是新一代年轻人的特质，你们要做好有智慧勇气和毅力，面对任何挑战！希望高三年级的同学们满怀信心，奋力拼搏，以最好的状态，发挥最好的水平，成就人生第一次梦想；古人云:少年壮志当拿云。此时此刻我想借用毛泽东主席的一段话对在座的同学们说：“世界是你们的，也是我们的，但归根结底是你们的。你们青年人朝气蓬勃，正在兴旺时期，好像早晨八、九点钟的太阳，希望寄托在你们身上”。
+
+       亲爱的老师们、同学们、朋友们，让我们在新的一年里拿出乘风破浪会有时，直挂云帆济沧海的奋斗精神，中流击水，傲立潮头！百尺竿头更进一步！定格奋进时代，绘写青春华章，2019年，我们追梦，赤橙黄绿青蓝紫 。
+
+</h3>
+	                        </div>
+	                        <img src="http://www.beijing101.com:80/uploadfiles/article/2019/06/12/b3c37f75aba847c49cc52312845f3516.jpg" />
+	                    </li>
+                    
+	                    <li onclick="showSchoolNews('1aeb8c1f-c373-4744-a83c-6efe05f2db2f', '5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36');">
+	                        <div class="con-text">
+	                            <p>
+	                                <b>12</b><br><span>2019-06 </span>
+	                            </p>
+	                            <h3 class="con-text-z">      在这流光溢彩的丰收季节里，我们迎来了北京一零一实验学校的开学典礼。很荣幸能站在这儿作为学生代表发言，在这里，请允许我代表全体同学，向老师们道一声：“老师，您辛苦了，感谢您陪伴我们一路成长！”也像高一的学弟学妹们道一声：祝贺你们经历了中考的磨练，并以优异的成绩迈进了北京一零一实验学校的大门。
+
+       高一的学弟学妹们，欢迎你走进高中的世界，加入奋斗者的行列。你们将在这里度过三年快乐又充实的时光。在这里，你们会学到更加深奥的知识，领略更加丰富的文化，为自己的人生做出正确的规划。这里就是梦想起航的地方。这里更是梦想成真的地方。
+
+       高二的同学们， 高中的旅程，你们已经走过了三分之一，告别了懵懂无知，经历过酸涩困惑，品尝过成功与辉煌。你们正值学习的黄金时期，希望你们在面临诱惑时，能坚守自己；在面临困境时，能调整自己；在志得意满时，能认清自己。总之，一定要积极向上，拼搏进取，不虚度时光，不懒惰拖拉，不心浮气躁，以最稳健的姿态迈入高三。
+
+       高三的同学们，278天后，我们将迎来人生的一次重大考验。此时的我们被寄予了太多的希望，老师、家人、朋友。老师一直在为我们保驾护航，父母正怀着拳拳的期望，战绩辉煌的上届学长、学姐们已我们树立了标杆。所以，我们都已枕戈待旦，摩拳擦掌。同学们，高三了，我们不仅要有信心，我们一定要有信念；我们不仅要拼搏，我们更要拼命；我们不仅讲成绩，我们更要创奇迹。人生无演习，高考不重来。从现在开始，我们一定要以最饱满的热情，最昂扬的斗志，最坚强的毅力，争分夺秒，勤学苦练，万念归一，血拼到底。让自己的人生不留遗憾，让母校的明天因我们而自豪。
+
+       同学们，我们“既然选择了远方，便只顾风雨兼程”。即使前面是浩翰的题海，我们也定要“衣带渐宽终不悔”；或许前面是“路漫漫其修远兮”，我们也必会“吾将上下而求索”。“大浪淘沙，方显真金本色；暴雨冲刷，更见青松巍峨”，泰戈尔说过：只有流过血的手指，才能弹出世间的绝唱，让我们以信念为舵，以理想为帆，以汗水为桨，乘着梦想之舟驶向成功的彼岸，在盛夏把凯歌奏响，在金秋把理想洒遍大学校园。
+
+       最后，衷心祝愿同学们在自己新的起点上，欲穷千里目，更上一层楼。同时也祝愿各位老师工作顺利，身体健康，祝愿北京一零一实验学校在新的一年里再创辉煌。
+
+</h3>
+	                        </div>
+	                        <img src="http://www.beijing101.com:80/uploadfiles/article/2019/06/12/8baa1b5b89e544f8a2f988225f16c394.jpg" />
+	                    </li>
+                    
+                    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="con-box-r fr">
+    	<div class="title-public clearfix">
+    		<ul>
+    			<li class="active">
+    				<p>
+	    			校内新闻 <span></span>
+	    			</p>
+		        	
+		        	<a href="http://www.beijing101.com/school/getMore.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&category=xydt_xnxw" class="more-btn">more<i></i></a>
+		        	
+    			</li>
+    			
+    			<li>
+	    			<p>
+	    			通知公告 <span></span>
+	    			</p>
+		        	
+			        	<a href="http://www.beijing101.com/school/getMore.do?schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36&category=xydt_tzgg" class="more-btn" style="display: none;">more<i></i></a>
+		        	
+    			</li>
+    		</ul>
+	    </div>
+	    <div class="conBox clearfix">
+    	<div class="con-box-new" style="display:block">
+	        <div class="new-list-box">
+	            
+		
+		        
+		        <ul class="new-list">
+		        
+		        
+		        
+		        
+		            <li title="2019年，我们追梦，赤橙黄绿青蓝紫" onclick="showSchoolNews('fd7e2d23-90af-4d90-b458-d781b6220320', '5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36');">
+		                <a class="fl" href="###">2019年，我们追梦，赤橙黄绿青蓝紫</a>
+		                 <i></i>
+		                <span class="time-text fr">2019-06-12 </span>
+		            </li>
+		        
+		        
+		        
+		        
+		        
+		        
+		            <li title="慕田峪高三成人仪式" onclick="showSchoolNews('1aeb8c1f-c373-4744-a83c-6efe05f2db2f', '5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36');">
+		                <a class="fl" href="###">慕田峪高三成人仪式</a>
+		                 <i></i>
+		                <span class="time-text fr">2019-06-12 </span>
+		            </li>
+		        
+		        
+		        
+		        </ul>
+		        
+			</div>
+		</div>
+		
+			<div class="con-box-new">
+		        <div class="new-list-box1">
+	            
+			
+		        
+	    	</div>
+    		</div>
+		</div>
+    	</div>
+    </div>
+    
+            <div class="six-module w1440 ma clearfix">
+            <ul>
+            	
+            	
+            	
+                <a href="http://www.beijing101.com/school/getDepartIndex.do?navigationId=0f180672-7f30-462e-99b6-c1c23026ac16&schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36"><li class="li-1">
+                    <p>学校发展中心 </p>
+                </li></a>
+            	
+            	
+            	
+                <a href="http://www.beijing101.com/school/getDepartIndex.do?navigationId=fb3596f6-22b5-4bd4-9e8f-8c4cd51fc544&schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36"><li class="li-2">
+                    <p>教师发展中心 </p>
+                </li></a>
+            	
+            	
+            	
+                <a href="http://www.beijing101.com/school/getDepartIndex.do?navigationId=eed199dc-426c-4175-b8cb-a3181d3f8b7b&schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36"><li class="li-3">
+                    <p>学生发展中心 </p>
+                </li></a>
+            	
+            	
+            	
+                <a href="http://www.beijing101.com/school/getDepartIndex.do?navigationId=ebe6b590-7f6b-4bb0-b0cb-d0fe7a620c67&schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36"><li class="li-4">
+                    <p>课程教学中心 </p>
+                </li></a>
+            	
+            	
+            	
+                <a href="http://www.beijing101.com/school/getDepartIndex.do?navigationId=6897ec0c-3b0c-48c6-983c-068c4937a2f5&schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36"><li class="li-5">
+                    <p>国际教育中心 </p>
+                </li></a>
+            	
+            	
+            	
+                <a href="http://www.beijing101.com/school/getDepartIndex.do?navigationId=b2be8157-20b0-49f9-9d16-eb189ef3b243&schoolId=5a3ffb4b-8d7f-449b-a90f-3cfd5db61c36"><li class="li-6">
+                    <p>后勤保障中心 </p>
+                </li></a>
+            	
+            	
+            	
+            </ul>
+        </div>
+</div>
+
+<!--Express-Lane-block-->
+<!--<div class="Express-Lane-block clearfix">
+    <div class="w1440 ma">
+        <h3>快速通道 </h3>
+        <ul class="Express-Lane">
+        	
+        	
+	            <a href="http://sms.101.net.cn/" target="_blank"><li class="li-1  pr ovh cover">
+	                <p>成绩查询 </p>
+	                <div class="layer-1"></div>
+	            </li></a>
+        	
+	            <a href="https://beijing101.neikongyi.com/nky" target="_blank"><li class="li-2  pr ovh cover">
+	                <p>预算执行 </p>
+	                <div class="layer-2"></div>
+	            </li></a>
+        	
+	            <a href="http://www.cnki.net/" target="_blank"><li class="li-3  pr ovh cover">
+	                <p>中国知网 </p>
+	                <div class="layer-3"></div>
+	            </li></a>
+        	
+	            <a href="http://beijing101.jyyun.com" target="_blank"><li class="li-4  pr ovh cover">
+	                <p>数字校园 </p>
+	                <div class="layer-4"></div>
+	            </li></a>
+        	
+	            <a href="http://mail.beijing101.com/" target="_blank"><li class="li-5  pr ovh cover">
+	                <p>邮件系统 </p>
+	                <div class="layer-5"></div>
+	            </li></a>
+        	
+	            <a href="http://gzzp.bjedu.cn:8003/" target="_blank"><li class="li-6  pr ovh cover">
+	                <p>综评系统 </p>
+	                <div class="layer-6"></div>
+	            </li></a>
+        	
+        	
+        </ul>
+    </div>
+</div>
+-->
+
+
+<!--footer-module-->
+<div class="footer-module bgGray clearfix">
+    <div class="w1440 ma">
+        <div class="logoB fl" onclick="location.href='/'">
+        
+       		
+            <img src="http://www.beijing101.com/resources/sunflower/css/images/ylysyzx_logo.png" alt=""/>
+       		
+       		
+       	
+        </div>
+        <div class="Contact-info fl">
+            <p class="address">北京 海淀区 颐和园路11号</p>
+            <p class="tel">（010）51633264</p>
+            <div class="map">
+                <div id="allmap"></div>
+                <i></i>
+            </div>
+        </div>
+
+        <div class="Friend-chain fl">
+            <p>友情链接：</p>
+            
+            
+            <a href="https://www.chinaedu.com/" target="_blank">101网校 </a>
+            
+            <a href="https://www.bjeea.cn/" target="_blank">北京教育考试院 </a>
+            
+            <a href="http://www.hdks.gov.cn/" target="_blank">海淀区招生考试中心 </a>
+            
+            <a href="http://www.bjhdedu.cn/" target="_blank">海淀教育网 </a>
+            
+            
+        </div>
+    </div>
+</div>
+
+<!--footer-box-->
+<div class="footer-box">
+    <p>京ICP备05061944号<i class="ml30"></i>|<i class="ml30"></i>京公安网备11010802025277号<i class="ml30"></i>|<i class="ml30"></i>版权所有：北京一零一中学</p>
+</div>
+<script type="text/javascript" src="http://www.beijing101.com/resources/sunflower/js/project/gaodemap/gaodemap.js"></script>
+<script>
+    //    banner轮播
+    jQuery(".slideBox1").slide({mainCell:".bd ul",effect:"leftLoop",autoPlay:true,trigger:"click"});
+    
+    function clickHrperlink(vthis, url, targetBlank){
+        $(vthis).addClass("active").siblings().removeClass("active");
+        if(url){
+        	window.open(url, targetBlank ? "_blank" : "_self");
         }
     }
+    
+    // 切换
+    var $div_li =$(".title-public>ul li");
+    $div_li.click(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+        var index =  $div_li.index(this);
+        $(".conBox > div").eq(index).show().siblings().hide();
+        $(".title-public a").each(function(i, e){
+        	if (i == index) {
+        		$(e).show();
+        	} else {
+        		$(e).hide();
+        	}
+        });
+    });
 </script>
-
-</head>
-
-<body>
-        <h3>设置密码</h3>
-        <form id="savepassword">
-          <input type="text" class="passwordsave" name="save-password" autocomplete="off" />
-        </form>
-        <button class="savepassword" onclick="save()" style="margin-top:16px;">确定</button>
-        <h3>输入密码</h3>
-        <form id="checkpassword">
-          <input type="text" class="passwordcheck" name="check-password" autocomplete="off" />
-        </form>
-        <button class="checkpasswordbtn" onclick="check()" style="margin-top:16px;">确定</button>
-</boody>
-
+</body>
 </html>
+
