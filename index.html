@@ -1,5 +1,12 @@
 <!doctype html>
-	<iframe SRC="head.html">
+<html>
+<!-- 	<iframe SRC="head.html"> -->
+	<head>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+
 		<style>
 			#draggable { width: 150px; height: 150px; padding: 0.5em; }
 		</style>
@@ -8,6 +15,10 @@
 				$( "#draggable" ).draggable();
 			});
 		</script>
+	</head>
+	<body>
 		<div id="draggable" class="ui-widget-content">
-  <p>请拖动我！</p>
-			</iframe>
+  		<p>请拖动我！</p>
+	</body>
+<!-- 			</iframe> -->
+</html>
