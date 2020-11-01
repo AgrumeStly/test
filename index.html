@@ -1,72 +1,51 @@
 <!doctype html>
-<html>
-<!-- 	<iframe SRC="head.html"> -->
-	<head>
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-		<script src="//code.jquery.com/jquery-1.9.1.js"></script>
-		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-		<link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
-
-		<style>
-			#draggable { width: 150px; height: 150px; padding: 0.5em; }
-		</style>
-  		<script>
-			$(function() {
-				$( "#draggable" ).draggable();
-			});
-		</script>
-	</head>
-	<body>
-		<!-- 拖动 -->
-		<div id="draggable" class="ui-widget-content">
-  			<p>请拖动我！</p>
-		</div>	
-        <span id="goodSpan" onclick="sendGood()">
-            <img src="img/good.jpg" style="width: 25px; height: 25px;" /> 
-        </span>
-        [<span id="good"></span>]
-            
-        <span id="badSpan" onclick="sendBad()">
-            <img src="img/good.jpg" style="width: 25px; height: 25px; transform: rotate(180deg);" /> 
-        </span>
-        [<span id="bad"></span>]
-         
-        <script>
-            /*点赞的数量：*/
-            document.getElementById("good").innerText = "";
-            var good = document.getElementById("good").textContent;
-             
-            document.getElementById("bad").innerText  = "";
-            var bad = document.getElementById("bad").textContent;
-            window.onload = function(){
-                if (good == "") {
-                    good = 0;
-                    document.getElementById("good").innerText = 0;
-                }
-                if (bad == "") {
-                    bad = 0;
-                    document.getElementById("bad").innerText = 0;
-                }              
-            }
-             
-            /*点赞的数量：*/
-            function sendGood(){
-                good = parseInt(good) + 1;
-                document.getElementById("good").innerText = good;
-            }
-             
-             
-            /*踩的数量：*/
-            function sendBad(){
-                bad = parseInt(bad) + 1;
-                document.getElementById("bad").innerText = bad;
-                document.getElementById("badSpan").onclick = function(e){
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                }
-            }
-        </script>
-		
-	</body>
-<!-- 			</iframe> -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI 自动完成（Autocomplete） - 默认功能</title>
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="jqueryui/style.css">
+  <script>
+  $(function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+  </script>
+</head>
+<body>
+ 
+<div class="ui-widget">
+  <label for="tags">标签：</label>
+  <input id="tags">
+</div>
+ 
+ 
+</body>
 </html>
