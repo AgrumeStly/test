@@ -1,51 +1,189 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+ 
 <head>
-  <meta charset="utf-8">
-  <title>jQuery UI 自动完成（Autocomplete） - 默认功能</title>
-  <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
-  <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
-  <link rel="stylesheet" href="jqueryui/style.css">
-  <script>
-  $(function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  });
-  </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
 </head>
+ 
 <body>
+ <style>
+ body {
+  margin: 0;
+  padding: 0;
+ }
  
-<div class="ui-widget">
-  <label for="tags">标签：</label>
-  <input id="tags">
-</div>
+ .content {
+  width: 800px;
+  height: 400px;
+  background-color: gray;
+  display: absolute;
+ 
+ }
+ </style>
+ 
+ <div id="content" class="content">
+ </div>
+ <button onclick="start()">开始游戏</button>
+ <button onclick="doUp()">上</button>
+ <button onclick="doDown()">下</button>
+ <button onclick="doLeft()">左</button>
+ <button onclick="doRight()">右</button>
+ <div id="score">0</div>
+ 
+ <script>
+ //定义参数
+ var snackBlock = {};
+ snackBlock.top = 20;
+ snackBlock.left = 20;
+ var firstDiv = showBlock(snackBlock.left, snackBlock.top, "red");
+ var snackDivArray = [];//装方块的数组
+ snackDivArray.push(firstDiv);
+ 
+ var left = 1, right = 2, up = 3, down = 4;
+ var direction = right;
+ var food = generateFood();//生成食物
+ var hasEat = false;
+ var score = 0;
  
  
+ function generateFood() {
+ 
+  var left = getRandomNum(39);
+  var top = getRandomNum(19);
+  var foodBlock = showBlock(left, top, "pink");
+  foodBlock.left = left;
+  foodBlock.top = top;
+  return foodBlock;
+ }
+ 
+ function getRandomNum(max) {
+  return Math.round(Math.random() * max) * 20;
+ }
+ 
+ function start() {
+  var interval = setInterval(function () {
+  var newBlock = {};
+  switch (direction) {
+   case up:
+   newBlock.top = snackBlock.top - 20;
+   newBlock.left = snackBlock.left;
+   break;
+   case down:
+   newBlock.top = snackBlock.top + 20;
+   newBlock.left = snackBlock.left;
+   break;
+   case left:
+   newBlock.top = snackBlock.top;
+   newBlock.left = snackBlock.left - 20;
+   break;
+   case right:
+   newBlock.top = snackBlock.top;
+   newBlock.left = snackBlock.left + 20;
+   break;
+ 
+  }
+ 
+ 
+  var currentLeft = newBlock.left;
+  var currentTop = newBlock.top;
+  var eat = false;
+ 
+  //吃食物
+  if (currentLeft == food.left && currentTop == food.top) {
+   removeBlock(food);
+   food = generateFood();
+   eat = true;
+   hasEat = true;
+   score += 10;//吃一个加10分
+   document.getElementById("score").innerHTML = score;//写入div
+  }
+ 
+  snackBlock = newBlock;
+  //是否撞墙
+  if (currentLeft < 0 || currentLeft >= 800 || currentTop < 0 || currentTop >= 400) {
+   alert("game over!");
+   clearInterval(interval);
+   return;
+  }
+  if (eat == false) {
+   //移除尾巴
+   removeBlock(snackDivArray.shift(div));
+  }
+  //是否撞到自己
+  snackDivArray.forEach(function (item, index, array) {
+   if (item.top == currentTop && item.left == currentLeft) {
+   alert("game over!");
+   clearInterval(interval);
+   return;
+   }
+  });
+ 
+  //创建新的身体
+  var div = showBlock(newBlock.left, newBlock.top, "red");
+  div.left = newBlock.left;
+  div.top = newBlock.top;
+  snackDivArray.push(div);
+ 
+  }, 300);
+ 
+ }
+ 
+ //方向控制
+ function doUp() {
+  if (direction == down && hasEat) {
+  return;
+  }
+  direction = up;
+ }
+ function doDown() {
+  if (direction == up && hasEat) {
+  return;
+  }
+  direction = down;
+ }
+ function doRight() {
+  if (direction == left && hasEat) {
+  return;
+  }
+  direction = right;
+ }
+ function doLeft() {
+  if (direction == right && hasEat) {
+  return;
+  }
+  direction = left;
+ }
+ 
+ function showBlock(left, top, color) {//产生方块
+  var content = document.getElementById("content");
+  var snackDiv = document.createElement("div");
+  snackDiv.style.width = "20px";
+  snackDiv.style.height = "20px";
+  snackDiv.style.left = left + "px";
+  snackDiv.style.top = top + "px";
+  snackDiv.style.background = color;
+  snackDiv.style.position = "absolute";
+  content.appendChild(snackDiv);
+  return snackDiv;
+ }
+ function removeBlock(div) {//移除方块
+  div.parentNode.removeChild(div);
+ }
+ //键盘控制方向 
+ document.onkeydown = function (e) {
+  if (e && e.keyCode == 87) {
+  doUp();
+  } else if (e && e.keyCode == 83) {
+  doDown();
+  } else if (e && e.keyCode == 65) {
+  doLeft();
+  } else if (e && e.keyCode == 68) {
+  doRight();
+  }
+ }
+ </script>
 </body>
+ 
 </html>
